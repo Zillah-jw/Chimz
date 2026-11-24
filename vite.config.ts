@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/Chi/',
+    base: '/Chimz/',
     plugins: [
       react(),
       tailwindcss(),
