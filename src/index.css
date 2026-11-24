@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-obsidian: #070406;
+  --color-velvet: #100609;
+  --color-wine: #24070f;
+  --color-burgundy: #3d0917;
+  --color-blood: #7f0e22;
+  --color-crimson: #9e152d;
+  --color-champagne: #ebd9c8;
+  --color-parchment: #c9b2a0;
+  --color-rosegold: #d4a39b;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #070406;
+    color: #ebd9c8;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #070406;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(158, 21, 45, 0.55);
+    color: #ebd9c8;
+  }
+}
+
+.headline-balance {
+  text-wrap: balance;
+}
+
+/* Subtle velvet-silk surface sheen */
+.velvet-surface {
+  background:
+    radial-gradient(120% 100% at 50% 0%, rgba(127, 14, 34, 0.14) 0%, rgba(16, 6, 9, 0.94) 65%, rgba(7, 4, 6, 1) 100%);
+}
+
+.candlelight-radial {
+  background: radial-gradient(
+    circle at 50% 40%,
+    rgba(196, 118, 92, 0.13) 0%,
+    rgba(127, 14, 34, 0.1) 36%,
+    rgba(7, 4, 6, 0) 72%
+  );
+}
+
+@keyframes vinyl-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.vinyl-spinning {
+  animation: vinyl-spin 14s linear infinite;
+}
+
+.vinyl-paused {
+  animation: vinyl-spin 14s linear infinite;
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .vinyl-spinning,
+  .vinyl-paused {
+    animation: none;
+  }
+}

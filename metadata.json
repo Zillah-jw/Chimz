@@ -1,0 +1,6 @@
+{
+  "name": "Somewhere Between Us",
+  "description": "An intimate dark romance letter and interactive evening experience dedicated to Chi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
